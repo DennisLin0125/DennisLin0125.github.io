@@ -1,11 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你好，Github</title>
+
+    <title>Gloria</title>
+    <meta name="language" content="zh-CN">
+    <meta name="title" content="Gloria">
+    <meta name="github" content="https://github.com/DennisLin0125/DennisLin0125.github.io">
+    <meta name="describe" content="收集不易，您的star是我堅持的動力，同時也歡迎各位PR哦! ">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .city {
+            width: 100%;
+            position: fixed;
+            bottom:
+                0px;
+            z-index: 100;
+        }
+
+        .city img {
+            width: 100%;
+        }
+
+        audio {
+            opacity: 0;
+        }
+    </style>
+    <title>
+        放煙火
+    </title>
+    <link href="modal.css" rel="stylesheet" />
 </head>
-<body>
-    <h1>覺得厲害</h1>
+
+<body onselectstart="return false">
+    <!--對話部分-->
+    <div class="share_img"><img src="a8b.png" alt=""></div>
+
+    <div class="page_one">
+        <div class="content">
+            <div class="text_wrapper">
+                <img src="a8.png" alt="">
+                <div class="text">
+                    君君~你願意嫁給我嗎~？
+                </div>
+            </div>
+        </div>
+        <div class="btn-groups">
+            <div class="heart-btn">
+                <div id="yes" class="btn btn-a"><span>願意</span></div>
+            </div>
+            <div id="no" class="btn btn-b"><span>不願意</span></div>
+        </div>
+    </div>
+    <!--煙火部分-->
+    <canvas id='cas' style="background-color:rgba(0,5,24,1)">
+        瀏覽器不支持canvas
+    </canvas>
+    <div class="city">
+        <img src="city.png" alt="" />
+    </div>
+    <img src="moon.png" alt="" id="moon" style="visibility: hidden;" />
+    <div style="display:none">
+        <div class="shape">
+            葉姿君
+        </div>
+        <div class="shape">
+            我愛妳
+        </div>
+    </div>
+
+    <!--音樂部分-->
+    <audio autoplay loop id="music">
+        <source src="music.mp3" type="audio/mpeg"/>
+    </audio>
+    <iframe id="iframMusic" allow="autoplay" style="display:none" src="music.mp3"></iframe>
+    <script src="jquery.min.js"></script>
+    <script src="fire.js"></script>
+    <script src="talk.js"></script>
 </body>
+
 </html>
