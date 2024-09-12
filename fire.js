@@ -10,13 +10,28 @@ var bigbooms = [];
 //     initAnimate();
 // };
 
-document.getElementById("iframMusic").onload = function(){
-    var music = document.getElementById("music");
-    music.src = 'music.mp3';
-    music.oncanplay = function(){
-        music.play();
-    };
-};
+// 取得元素
+var music = document.getElementById("music");
+
+// 為 #yes 和 #no 按紐添加點擊事件
+document.getElementById("yes").addEventListener("click", function() {
+    playMusic();
+});
+
+document.getElementById("no").addEventListener("click", function() {
+    playMusic();
+});
+
+// 播放播放音樂函數
+function playMusic() {
+    music.play().then(function() {
+        console.log("音樂開始播放");
+    }).catch(function(error) {
+        console.error("播放失敗: " + error);
+    });
+}
+
+
 
 function initAnimate() {
     drawBg();
